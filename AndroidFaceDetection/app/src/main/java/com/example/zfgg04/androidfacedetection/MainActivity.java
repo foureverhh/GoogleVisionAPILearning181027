@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Made a rect frame by rectPaint
         final Paint rectPaint = new Paint();
-        rectPaint.setStrokeWidth(5);
+        rectPaint.setStrokeWidth(10);
         rectPaint.setColor(Color.GREEN);
         rectPaint.setStyle(Paint.Style.STROKE);
 
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         //To make a temporary bitmap to draw on canvas
         final Bitmap tempBitmap = Bitmap.createBitmap(bitmap.getWidth(),bitmap.getWidth(),Bitmap.Config.RGB_565);
         final Canvas canvas = new Canvas(tempBitmap);
-
+        canvas.drawBitmap(bitmap,0,0,null);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
